@@ -1,0 +1,32 @@
+@import "../../styles/placeholders.scss";
+
+.in-progress {
+  @extend %block;
+
+  &__main-title {
+    @extend %main--title;
+  }
+
+  &__list {
+    @extend %list;
+    background-color: rgb(143, 211, 238);
+
+  }
+
+  &__item {
+    @extend %item;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__item-text {
+    @extend %item--text;
+  }
+}
+
+.active_module_progress {
+  @extend %active_module;
+  background-color: rgb(201, 143, 206);
+}

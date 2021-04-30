@@ -1,0 +1,53 @@
+$duration: 0.5s;
+
+%block {
+  margin-top: 10px;
+  border: 2px solid rgb(30, 84, 128);
+  border-radius: 6px;
+  height: 625px;
+}
+
+%main--title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+%list {
+  border-top: transparent;
+  padding: 5px;
+  overflow-y: scroll;
+  height: 590px;
+}
+
+%item {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(205, 209, 235);
+}
+
+%title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+%item--text {
+  margin-bottom: 5px;
+  background-color: rgb(92, 179, 167);
+  border-radius: 5px;
+  padding: 5px;
+  border-left: 3px solid rgb(14, 80, 201);
+  transition: transform $duration,
+    opacity $duration;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    opacity: 0.7;
+  }
+}
+
+%active_module {
+  transform: scale(1.03);
+}
