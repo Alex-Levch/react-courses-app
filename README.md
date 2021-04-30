@@ -7,3 +7,4 @@ To use this template click `Use this template`
 `Deploy` - available to deploy your application to gh-pages
 
 `SCSS Preprocessor` - available to write your styles with modern style language
+- [DEMO LINK](https://alex-levch.github.io/react-courses-app/)
