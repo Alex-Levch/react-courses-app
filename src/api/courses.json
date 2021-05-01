@@ -623,5 +623,281 @@
         "isActive": false
       }
     ]
+  },
+  {
+    "title": "Dark queen course",
+    "userId": 8,
+    "modules": [
+      {
+        "description": "Dark queen description of in-progress module",
+        "author": "Dark queen",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 65,
+        "isActive": false
+      },
+      {
+        "description": "Dark queen description of in-progress module",
+        "author": "Dark queen",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 66,
+        "isActive": false
+      },
+      {
+        "description": "Dark queen description of submitted module",
+        "author": "Dark queen",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 67,
+        "isActive": false
+      },
+      {
+        "description": "Dark queen description of submitted module",
+        "author": "Dark queen",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 68,
+        "isActive": false
+      },
+      {
+        "description": "Dark queen description of submitted module",
+        "author": "Dark queen",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 69,
+        "isActive": false
+      },
+      {
+        "description": "Dark queen description of ready module",
+        "author": "Dark queen",
+        "status": "READY",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 70,
+        "isActive": false
+      },
+      {
+        "description": "Dark queen description of complete module",
+        "author": "Dark queen",
+        "status": "COMPLETE",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 71,
+        "isActive": false
+      }
+    ]
+  },
+  {
+    "title": "Shadow boss course",
+    "userId": 9,
+    "modules": [
+      {
+        "description": "Shadow boss description of in-progress module",
+        "author": "Shadow boss",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 72,
+        "isActive": false
+      },
+      {
+        "description": "Shadow boss description of in-progress module",
+        "author": "Shadow boss",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 73,
+        "isActive": false
+      },
+      {
+        "description": "Shadow boss description of submitted module",
+        "author": "Shadow boss",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 74,
+        "isActive": false
+      },
+      {
+        "description": "Shadow boss description of submitted module",
+        "author": "Shadow boss",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 75,
+        "isActive": false
+      },
+      {
+        "description": "Shadow boss description of submitted module",
+        "author": "Shadow boss",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 76,
+        "isActive": false
+      },
+      {
+        "description": "Shadow boss description of ready module",
+        "author": "Shadow boss",
+        "status": "READY",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 77,
+        "isActive": false
+      },
+      {
+        "description": "Shadow boss description of complete module",
+        "author": "Shadow boss",
+        "status": "COMPLETE",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 78,
+        "isActive": false
+      }
+    ]
+  },
+  {
+    "title": "Robo Magnus course",
+    "userId": 10,
+    "modules": [
+      {
+        "description": "Robo Magnus description of in-progress module",
+        "author": "Robo Magnus",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 79,
+        "isActive": false
+      },
+      {
+        "description": "Robo Magnus description of in-progress module",
+        "author": "Robo Magnus",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 80,
+        "isActive": false
+      },
+      {
+        "description": "Robo Magnus description of submitted module",
+        "author": "Robo Magnus",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 81,
+        "isActive": false
+      },
+      {
+        "description": "Robo Magnus description of submitted module",
+        "author": "Robo Magnus",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 82,
+        "isActive": false
+      },
+      {
+        "description": "Robo Magnus description of submitted module",
+        "author": "Robo Magnus",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 83,
+        "isActive": false
+      },
+      {
+        "description": "Robo Magnus description of ready module",
+        "author": "Robo Magnus",
+        "status": "READY",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 84,
+        "isActive": false
+      },
+      {
+        "description": "Robo Magnus description of complete module",
+        "author": "Robo Magnus",
+        "status": "COMPLETE",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 85,
+        "isActive": false
+      }
+    ]
+  },
+  {
+    "title": "General Slaughter course",
+    "userId": 11,
+    "modules": [
+      {
+        "description": "General Slaughter description of in-progress module",
+        "author": "General Slaughter",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 86,
+        "isActive": false
+      },
+      {
+        "description": "General Slaughter description of in-progress module",
+        "author": "General Slaughter",
+        "status": "IN_PROGRESS",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 87,
+        "isActive": false
+      },
+      {
+        "description": "General Slaughter description of submitted module",
+        "author": "General Slaughter",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 88,
+        "isActive": false
+      },
+      {
+        "description": "General Slaughter description of submitted module",
+        "author": "General Slaughter",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 89,
+        "isActive": false
+      },
+      {
+        "description": "General Slaughter description of submitted module",
+        "author": "General Slaughter",
+        "status": "SUBMITTED",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 90,
+        "isActive": false
+      },
+      {
+        "description": "General Slaughter description of ready module",
+        "author": "General Slaughter",
+        "status": "READY",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 91,
+        "isActive": false
+      },
+      {
+        "description": "General Slaughter description of complete module",
+        "author": "General Slaughter",
+        "status": "COMPLETE",
+        "moduleInfo": "Information about module",
+        "moduleText": "Some interesting information about module",
+        "id": 92,
+        "isActive": false
+      }
+    ]
   }
 ]

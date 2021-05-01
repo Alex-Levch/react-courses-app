@@ -1,2 +1,2 @@
 React (Hooks)
-- [DEMO LINK](https://alex-levch.github.io/react-courses-app/)
+- [DEMO LINK](https://Alex-Levch.github.io/react-courses-app/)
