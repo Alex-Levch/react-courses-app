@@ -1,0 +1,31 @@
+@import "../../styles/placeholders.scss";
+
+.ready {
+  @extend %block;
+
+  &__main-title {
+    @extend %main--title;
+  }
+
+  &__list {
+    @extend %list;
+    background-color: rgb(132, 187, 81);
+  }
+
+  &__item {
+    @extend %item;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__item-text {
+    @extend %item--text;
+  }
+}
+
+.active_module_ready {
+  background-color: rgba(182, 179, 12, 0.52);
+  transform: scale(1.03);
+}
