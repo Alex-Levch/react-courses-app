@@ -5,6 +5,8 @@ import React, {
   useEffect,
 } from 'react';
 import classNames from 'classnames';
+import ReactPlaceholder from 'react-placeholder';
+import 'react-placeholder/lib/reactPlaceholder.css';
 import {
   IoIosArrowDown,
   IoIosArrowUp,
@@ -34,6 +36,13 @@ export const App = () => {
   const [selectedItem, setSelectedItem] = useState({});
   const [inputValue, setInputValue] = useState('');
   const [selectedId, setSelectedId] = useState(0);
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsReady(true);
+    }, 4000);
+  }, []);
 
   useEffect(() => {
     setCourses([...coursesFromServer]);
@@ -85,156 +94,164 @@ export const App = () => {
     .filter(inputFilter);
 
   return (
-    <CounterContextProvider>
-      <div className="app">
-        <div className="app__search-field-box">
-          <input
-            className="app__search-field"
-            type="text"
-            placeholder="Enter some text"
-            value={inputValue}
-            onChange={handleChange}
-          />
-          <div
-            className="app__search-field-icon"
-          >
-            <FcSearch />
+    <ReactPlaceholder
+      type="media"
+      rows={25}
+      showLoadingAnimation
+      delay={3000}
+      ready={isReady}
+    >
+      <CounterContextProvider>
+        <div className="app">
+          <div className="app__search-field-box">
+            <input
+              className="app__search-field"
+              type="text"
+              placeholder="Enter some text"
+              value={inputValue}
+              onChange={handleChange}
+            />
+            <div
+              className="app__search-field-icon"
+            >
+              <FcSearch />
+            </div>
           </div>
-        </div>
-        <div className="app__logo-box">
-          <FaReact
-            className="app__logo"
+          <div className="app__logo-box">
+            <FaReact
+              className="app__logo"
+            />
+          </div>
+          <TotalModules />
+          <InProgressList
+            openSidebar={openSidebar}
+            courses={[...filteredCourses]}
+            addSelectedItem={addSelectedItem}
+            isModuleClicked={isModuleClicked}
+            toggle={toggle}
+            selectedId={selectedId}
+            setSelectedId={setSelectedId}
           />
-        </div>
-        <TotalModules />
-        <InProgressList
-          openSidebar={openSidebar}
-          courses={[...filteredCourses]}
-          addSelectedItem={addSelectedItem}
-          isModuleClicked={isModuleClicked}
-          toggle={toggle}
-          selectedId={selectedId}
-          setSelectedId={setSelectedId}
-        />
-        <SubmittedList
-          openSidebar={openSidebar}
-          courses={[...filteredCourses]}
-          addSelectedItem={addSelectedItem}
-          isModuleClicked={isModuleClicked}
-          toggle={toggle}
-          selectedId={selectedId}
-          setSelectedId={setSelectedId}
-        />
-        <ReadyList
-          openSidebar={openSidebar}
-          courses={[...filteredCourses]}
-          addSelectedItem={addSelectedItem}
-          isModuleClicked={isModuleClicked}
-          toggle={toggle}
-          selectedId={selectedId}
-          setSelectedId={setSelectedId}
-        />
-        <CompleteList
-          openSidebar={openSidebar}
-          courses={[...filteredCourses]}
-          addSelectedItem={addSelectedItem}
-          isModuleClicked={isModuleClicked}
-          toggle={toggle}
-          selectedId={selectedId}
-          setSelectedId={setSelectedId}
-        />
-        <div className="app__open-sidebar-box">
-          <IoIosArrowRoundBack
-            className="app__open-sidebar-button"
-            onClick={() => {
-              openSidebar();
-            }}
-            type="button"
+          <SubmittedList
+            openSidebar={openSidebar}
+            courses={[...filteredCourses]}
+            addSelectedItem={addSelectedItem}
+            isModuleClicked={isModuleClicked}
+            toggle={toggle}
+            selectedId={selectedId}
+            setSelectedId={setSelectedId}
           />
-        </div>
-        <div className={classNames('sidebar', {
-          sidebar__opened: isSidebarOpen,
-          sidebar__closed: !isSidebarOpen,
-        })}
-        >
-          <h2 className="sidebar__title">
-            Courses
-          </h2>
-          <ul className="sidebar__list">
-            {selectedItems.map((item, index) => (
-              <li
-                key={uuidv4()}
-                className={classNames('sidebar__item', {
-                  active_module: selectedId === item.id,
-                })}
-                role="button"
-                tabIndex={0}
-                onKeyDown={() => null}
-                onClick={() => {
-                  toggle(index);
-                  setSelectedId(item.id);
-                }}
-              >
-                <div>
-                  <h3 className="sidebar__selected-title">
-                    {`${item.author} course`}
-                  </h3>
-                  <p className="sidebar__selected-description">
-                    {item.description}
-                  </p>
-                </div>
-                {isModuleClicked === index ? (
-                  <>
-                    <p
-                      className="sidebar__selected-info"
-                    >
-                      {item.moduleInfo}
-                    </p>
-                    <p
-                      className="sidebar__selected-info"
-                    >
-                      {item.moduleText}
-                    </p>
-                  </>
-                ) : null}
-                <div
-                  className="sidebar__selected-icon"
-                >
-                  {isModuleClicked === index
-                    ? <IoIosArrowUp />
-                    : <IoIosArrowDown />}
-                </div>
-                <button
-                  type="button"
-                  className="sidebar__button-remove"
-                  onClick={(event) => {
-                    removeSelectedItem(index);
-                    event.stopPropagation();
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
-          <div className="sidebar__button-close-box">
+          <ReadyList
+            openSidebar={openSidebar}
+            courses={[...filteredCourses]}
+            addSelectedItem={addSelectedItem}
+            isModuleClicked={isModuleClicked}
+            toggle={toggle}
+            selectedId={selectedId}
+            setSelectedId={setSelectedId}
+          />
+          <CompleteList
+            openSidebar={openSidebar}
+            courses={[...filteredCourses]}
+            addSelectedItem={addSelectedItem}
+            isModuleClicked={isModuleClicked}
+            toggle={toggle}
+            selectedId={selectedId}
+            setSelectedId={setSelectedId}
+          />
+          <div className="app__open-sidebar-box">
             <IoIosArrowRoundBack
-              className="sidebar__button-close"
+              className="app__open-sidebar-button"
               onClick={() => {
-                closeSidebar();
+                openSidebar();
               }}
               type="button"
             />
           </div>
-          <button
-            className="sidebar__button-clear"
-            onClick={() => {
-              clearAll();
-            }}
-            type="button"
+          <div className={classNames('sidebar', {
+            sidebar__opened: isSidebarOpen,
+            sidebar__closed: !isSidebarOpen,
+          })}
           >
-            Clear All
-          </button>
+            <h2 className="sidebar__title">
+              Courses
+            </h2>
+            <ul className="sidebar__list">
+              {selectedItems.map((item, index) => (
+                <li
+                  key={uuidv4()}
+                  className={classNames('sidebar__item', {
+                    active_module: selectedId === item.id,
+                  })}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={() => null}
+                  onClick={() => {
+                    toggle(index);
+                    setSelectedId(item.id);
+                  }}
+                >
+                  <div>
+                    <h3 className="sidebar__selected-title">
+                      {`${item.author} course`}
+                    </h3>
+                    <p className="sidebar__selected-description">
+                      {item.description}
+                    </p>
+                  </div>
+                  {isModuleClicked === index ? (
+                    <>
+                      <p
+                        className="sidebar__selected-info"
+                      >
+                        {item.moduleInfo}
+                      </p>
+                      <p
+                        className="sidebar__selected-info"
+                      >
+                        {item.moduleText}
+                      </p>
+                    </>
+                  ) : null}
+                  <div
+                    className="sidebar__selected-icon"
+                  >
+                    {isModuleClicked === index
+                      ? <IoIosArrowUp />
+                      : <IoIosArrowDown />}
+                  </div>
+                  <button
+                    type="button"
+                    className="sidebar__button-remove"
+                    onClick={(event) => {
+                      removeSelectedItem(index);
+                      event.stopPropagation();
+                    }}
+                  />
+                </li>
+              ))}
+            </ul>
+            <div className="sidebar__button-close-box">
+              <IoIosArrowRoundBack
+                className="sidebar__button-close"
+                onClick={() => {
+                  closeSidebar();
+                }}
+                type="button"
+              />
+            </div>
+            <button
+              className="sidebar__button-clear"
+              onClick={() => {
+                clearAll();
+              }}
+              type="button"
+            >
+              Clear All
+            </button>
+          </div>
         </div>
-      </div>
-    </CounterContextProvider>
+      </CounterContextProvider>
+    </ReactPlaceholder>
   );
 };
