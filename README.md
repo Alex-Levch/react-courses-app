@@ -7,4 +7,6 @@
 4. Run npm start to run a development server at http://localhost:3000
 
 
+# Application with sorting filtering and adding selected items to the sidebar
+
 - [DEMO LINK](https://Alex-Levch.github.io/react-courses-app/)
