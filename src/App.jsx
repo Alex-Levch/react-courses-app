@@ -96,9 +96,8 @@ export const App = () => {
   return (
     <ReactPlaceholder
       type="media"
-      rows={25}
+      rows={24}
       showLoadingAnimation
-      delay={3000}
       ready={isReady}
     >
       <CounterContextProvider>
